@@ -1,0 +1,89 @@
+// BREAKPOINTS ----------------
+
+$smallmobile: 0px;
+$mobile: 320px;
+$tablet: 540px;
+$desktop: 900px;
+$widedesktop: 1200px;
+
+// MIXINS ---------------
+
+@mixin small-mobile-only {
+  @media (max-width: #{$mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-above {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-and-below {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-above {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-and-below {
+  @media (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-above {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-and-below {
+  @media (max-width: #{$widedesktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin widedesktop-only {
+  @media (min-width: $widedesktop) {
+    @content;
+  }
+}
+
+@mixin below($x) {
+  @media (max-width: $x + 'px') {
+    @content;
+  }
+}
+
+@mixin above($x) {
+  @media (min-width: $x + 'px') {
+    @content;
+  }
+}
+
+@mixin below-height($x) {
+  @media (max-height: $x + 'px') {
+    @content;
+  }
+}
+
+@mixin above-height($x) {
+  @media (min-height: $x + 'px') {
+    @content;
+  }
+}
+
+
+
+
+
+
+
+
