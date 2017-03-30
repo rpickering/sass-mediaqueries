@@ -1,9 +1,9 @@
-##Approach
+## Approach
 
 Forcing to write '-and-above/below' removes ambiguity, allows for both mobile-first and desktop-first styling
 
 
-##Examples
+## Examples
 
 ```
 @include small-mobile-only {}
@@ -16,14 +16,14 @@ Forcing to write '-and-above/below' removes ambiguity, allows for both mobile-fi
 @include widedesktop-only {}
 ```
 
-###For special breakpoints, use sparingly:
+### For special breakpoints, use sparingly:
 
 ```
 @include below(600) {}
 @include above(600) {}
 ```
 
-###For dealing with vertical space available (non-scrolling layouts): 
+### For dealing with vertical space available (non-scrolling layouts): 
 
 ```
 @include below-height(600) {}
